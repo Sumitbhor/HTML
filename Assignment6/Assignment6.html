@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+
+    <script>
+        function validateForm() {
+            let name = document.forms["myForm"]["name"].value;
+            let email = document.forms["myForm"]["email"].value;
+            // Check empty fields
+            if (name == "" || email == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+
+            // Email validation using regex
+            let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if (!email.match(emailPattern)) {
+                alert("Enter a valid email address");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+<h2>Form Validation Example</h2>
+<form name="myForm">
+    Name: <input type="text" name="name"><br><br>
+    Email: <input type="text" name="email"><br><br>
+    <button onclick="validateForm()">click me</button>
+</form>
+
+</body>
+</html>
