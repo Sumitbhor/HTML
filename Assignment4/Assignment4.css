@@ -1,0 +1,16 @@
+body{
+background-color: #f2f2f2;
+background-image:url("background.avif");
+font-family: Arial;
+}
+
+td{
+text-align: center;
+padding: 10px;
+}
+
+table{
+border:3px solid black;
+border-radius:10px;
+background-color:rgba(211,211,211,0.5);
+}
